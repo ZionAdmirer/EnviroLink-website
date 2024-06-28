@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnviroLink</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Styles */
+        header {
+            /* background-color: #333; */
+            color: black;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            margin-top: -22px;
+            margin-left: -45px;
+            /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffcc00;
+            text-decoration: none;
+            margin-left: 575px;
+            text-align: center;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            text-align: right;
+            margin-right: 123px;
+            margin-top: 13px;
+
+        }
+
+        .nav-links li {
+            display: inline-block;
+            margin-left: 15px;
+        }
+
+        .nav-links li:first-child {
+            margin-left: 0;
+        }
+
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 10px 15px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            background-color: #ffcc00;
+            color: #333;
+            border-radius: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('ai-generated-8774130_1920.jpg') center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+           
+        }
+
+        .hero-content {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px #ffffff;
+            margin-top: 91px;
+        }
+
+        .hero-text {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px #ffffff;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #ffcc00;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-size: 1.1rem;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #ffa500;
+        }
+
+        /* Sections Styling */
+        section {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 3rem;
+            margin-bottom: 40px;
+            position: relative;
+            color: #333;
+        }
+
+        section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            color: #666;
+        }
+
+        /* About Section */
+        .about {
+            background-color: #f9f9f9;
+        }
+
+        /* Explore Trails Section */
+        .explore {
+            background-color: #e6f7ff;
+        }
+
+        /* Eco Tips Section */
+        .eco-tips {
+            background-color: #f0f9f4;
+        }
+
+        .eco-tip {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #d9f5e6;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        /* Get Involved Section */
+        .get-involved {
+            background-color: #ffe6cc;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: #f5f5f5;
+        }
+
+        /* Footer Styles */
+  
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            margin-bottom: -3100px;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #ffcc00;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-text {
+                font-size: 1.2rem;
+            }
+
+            section h2 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <div class="container">
+        <nav>
+            <a href="#" class="logo">EnviroLink</a>
+            <ul class="nav-links">
+                <li><a href="xcarboncalculator.html">Carbon Calculator</a></li>
+                <li><a href="xlanguages.html">Learning Languages</a></li>
+                <li><a href="xcommunity.html">Community</a></li>
+                <li><a href="xgetinvolved.html">Get Involved</a></li>
+                <li><a href="xcontact.html">Contact Us</a></li>
+                <!-- <li><a href="xtermsandconditions.html">Terms and Conditions</a></li> -->
+         
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h2 class="hero-title">Discover Nature<br>Explore with EnviroLink</h2>
+            <p class="hero-text">Connecting you to sustainable adventures and eco-friendly practices.</p>
+            <a href="xhikingtrails.html" class="btn">Explore Now</a>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about">
+    <div class="container">
+        <h2>About EnviroLink</h2>
+        <p>Welcome to EnviroLink, your portal to environmental awareness and outdoor exploration. We are dedicated to promoting eco-friendly practices and fostering a deep connection with nature.</p>
+        <p>Join us in our mission to preserve our planet's natural beauty and biodiversity for future generations. Explore our resources, discover local trails, and learn practical eco-tips to live sustainably.</p>
+    </div>
+</section>
+
+<!-- Explore Trails Section -->
+<section id="explore" class="explore">
+    <div class="container">
+        <h2>Explore Nature Trails</h2>
+        <p>Embark on memorable journeys through breathtaking landscapes and diverse ecosystems. Find trails near you, from serene forests to majestic mountains.</p>
+        <p>Plan your next adventure with trail maps, difficulty ratings, and safety tips. Experience the wonders of nature responsibly with EnviroLink.</p>
+    </div>
+</section>
+
+<!-- Eco Tips Section -->
+<section id="eco-tips" class="eco-tips">
+    <div class="container">
+        <h2>Eco Tips for Sustainable Living</h2>
+        <div class="eco-tips-content">
+            <div class="eco-tip">
+                <h3>Reduce Waste</h3>
+                <p>Minimize single-use plastics and opt for reusable alternatives. Recycle materials properly to conserve resources.</p>
+            </div>
+            <div class="eco-tip">
+                <h3>Conserve Energy</h3>
+                <p>Turn off lights and electronics when not in use. Use energy-efficient appliances and adopt renewable energy solutions.</p>
+            </div>
+            <div class="eco-tip">
+                <h3>Protect Water Sources</h3>
+                <p>Conserve water by fixing leaks and using water-saving fixtures. Support clean water initiatives in your community.</p>
+            </div>
+            <div class="eco-tip">
+                <h3>Support Local Eco-Friendly Products</h3>
+                <p>Choose sustainable products and support local businesses committed to environmental stewardship.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Get Involved Section -->
+<section id="get-involved" class="get-involved">
+    <div class="container">
+        <h2>Get Involved in Conservation</h2>
+        <p>Make a positive impact in your community by volunteering for environmental projects, participating in clean-up efforts, and supporting conservation initiatives.</p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Contact EnviroLink</h2>
+        <p>Have questions or suggestions? We'd love to hear from you. Reach out to us via the form below or connect with us on social media.</p>
+        <!-- Example form (replace with your actual form code) -->
+        <form action="#" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <div class="container">
+        <p>Follow us on social media:</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>&copy; 2024 EnviroLink. All rights reserved.</p>
+    </div>
+</footer>
+<!-- Optional: JavaScript for smooth scrolling -->
+<script>
+    window.onload = function() {
+        setTimeout(function() {
+            window.scrollTo(0, 0);
+        }, 0);
+    };
+    window.onload = function() {
+        setTimeout(function() {
+            window.scrollTo(0, 0);
+        }, 0);
+    };
+
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        // Calculate scroll percentage
+        const scrollPosition = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.body.clientHeight;
+        const scrolled = (scrollPosition / (documentHeight - windowHeight)) * 100;
+
+        // Fade out the header gradually
+        header.style.opacity = 1 - (scrollPosition / 70);
+    });
+
+    // JavaScript for animations
+    document.addEventListener('DOMContentLoaded', function() {
+        // Hero section animation
+        const heroContent = document.querySelector('.hero-content');
+        heroContent.classList.add('show');
+    });
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

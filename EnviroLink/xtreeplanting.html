@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree Planting Events</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Styles */
+        header {
+            /* background-color: #333; */
+            color: #fff;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffcc00;
+            text-decoration: none;
+            margin-left: 545px;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            text-align: right;
+            margin-right: 20px;
+        }
+
+        .nav-links li {
+            display: inline-block;
+            margin-left: 15px;
+        }
+
+        .nav-links li:first-child {
+            margin-left: 0;
+        }
+
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 10px 15px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links li a.active,
+        .nav-links li a:hover {
+            background-color: #ffcc00;
+            color: #333;
+            border-radius: 5px;
+        }
+
+        /* Tree Planting Events Section */
+        .events-section {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            margin-bottom: 40px;
+            margin-top: 33px;
+            color: #333;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #ffcc00;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .events-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .event-card {
+            max-width: 300px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .event-card.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .event-card h3 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .event-card p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .event-card .btn {
+            display: block;
+            width: 100%;
+            padding: 12px 0;
+            background-color: #ffcc00;
+            color: #333;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        .event-card .btn:hover {
+            background-color: #ffa500;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            margin-bottom: -400px;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #ffcc00;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <div class="container">
+        <nav>
+            <a href="#" class="logo">EnviroLink</a>
+            <ul class="nav-links">
+                <!-- <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Explore Trails</a></li>
+                <li><a href="#">Eco Tips</a></li>
+                <li><a href="#">Get Involved</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#" class="active">Volunteer</a></li> -->
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Tree Planting Events Section -->
+<section class="events-section">
+    <div class="container">
+        <h2 class="section-title">Tree Planting Events</h2>
+
+        <div class="events-list">
+            <!-- Event Card 1 -->
+            <div class="event-card">
+                <h3>Spring Tree Planting Festival</h3>
+                <p>Join us in planting native trees to restore habitats and promote biodiversity. All ages and experience levels welcome!</p>
+                <a href="#" class="btn">Sign Up</a>
+            </div>
+
+            <!-- Event Card 2 -->
+            <div class="event-card">
+                <h3>Summer Reforestation Project</h3>
+                <p>Help combat deforestation by planting new trees in areas affected by wildfires. Training and tools provided.</p>
+                <a href="#" class="btn">Sign Up</a>
+            </div>
+
+            <!-- Event Card 3 -->
+            <div class="event-card">
+                <h3>Fall Community Planting Day</h3>
+                <p>Get involved in enhancing urban green spaces with a day of tree planting and environmental education activities.</p>
+                <a href="#" class="btn">Sign Up</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <div class="container">
+        <p>Follow us on social media:</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>&copy; 2024 EnviroLink. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Optional: JavaScript for fade-in animations -->
+<script>
+    window.onload = function() {
+        setTimeout(function() {
+            window.scrollTo(0, 0);
+        }, 0);
+    };
+    window.onload = function() {
+        setTimeout(function() {
+            window.scrollTo(0, 0);
+        }, 0);
+    };
+
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        // Calculate scroll percentage
+        const scrollPosition = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.body.clientHeight;
+        const scrolled = (scrollPosition / (documentHeight - windowHeight)) * 100;
+
+        // Fade out the header gradually
+        header.style.opacity = 1 - (scrollPosition / 70);
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+        const eventCards = document.querySelectorAll('.event-card');
+
+        // Intersection Observer to trigger fade-in animation
+        const fadeInOptions = {
+            threshold: 0.5,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const fadeInObserver = new IntersectionObserver(function(entries, fadeInObserver) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('loaded');
+                    fadeInObserver.unobserve(entry.target);
+                }
+            });
+        }, fadeInOptions);
+
+        eventCards.forEach(card => {
+            fadeInObserver.observe(card);
+        });
+
+        // Handle sign-up button click (replace with actual functionality)
+        const signButtons = document.querySelectorAll('.event-card .btn');
+        signButtons.forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+                alert('Thank you for signing up! We will contact you with further details.');
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

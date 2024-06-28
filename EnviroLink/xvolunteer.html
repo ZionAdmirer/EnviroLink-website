@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Opportunities</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Styles */
+        header {
+            /* background-color: #333; */
+            color: #fff;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffcc00;
+            text-decoration: none;
+            margin-left: 525px;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            text-align: right;
+            margin-right: 20px;
+        }
+
+        .nav-links li {
+            display: inline-block;
+            margin-left: 15px;
+        }
+
+        .nav-links li:first-child {
+            margin-left: 0;
+        }
+
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 10px 15px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links li a.active,
+        .nav-links li a:hover {
+            background-color: #ffcc00;
+            color: #333;
+            border-radius: 5px;
+        }
+
+        /* Volunteer Opportunities Section */
+        .volunteer-section {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            margin-bottom: 40px;
+            position: relative;
+            color: #333;
+        }
+
+        .opportunity {
+            background-color: #fff;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .fade-in {
+            opacity: 1;
+        }
+
+        .opportunity h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .opportunity p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: #666;
+        }
+
+        .opportunity .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #ffcc00;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .opportunity .btn:hover {
+            background-color: #ffa500;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            margin-bottom: -850px;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #ffcc00;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <div class="container">
+        <nav>
+            <a href="#" class="logo">EnviroLink</a>
+            <ul class="nav-links">
+                <!-- <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#explore">Explore Trails</a></li>
+                <li><a href="#eco-tips">Eco Tips</a></li>
+                <li><a href="get-involved.html">Get Involved</a></li>
+                <li><a href="contact.html">Contact Us</a></li> -->
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Volunteer Opportunities Section -->
+<section class="volunteer-section">
+    <div class="container">
+        <h2 class="section-title">Volunteer Opportunities</h2>
+        
+        <div class="opportunity fade-in">
+            <h3>Trail Maintenance</h3>
+            <p>Help maintain our beautiful hiking trails by volunteering for regular maintenance activities such as clearing debris, repairing signage, and improving trail conditions.</p>
+            <a href="xtrailmaintanance.html" class="btn">Sign Up</a>
+        </div>
+        
+        <div class="opportunity fade-in">
+            <h3>Tree Planting Events</h3>
+            <p>Join us in reforestation efforts by participating in tree planting events throughout the year. Plant native species and contribute to restoring natural habitats.</p>
+            <a href="xtreeplanting.html" class="btn">Get Involved</a>
+        </div>
+        
+        <div class="opportunity fade-in">
+            <h3>Educational Outreach</h3>
+            <p>Spread awareness about environmental conservation through educational programs and outreach activities. Help organize workshops, seminars, and community events.</p>
+            <a href="xeducationoutreach.html" class="btn">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <div class="container">
+        <p>Follow us on social media:</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>&copy; 2024 EnviroLink. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Optional: JavaScript for fade-in animations -->
+<script>
+    window.onload = function() {
+        setTimeout(function() {
+            window.scrollTo(0, 0);
+        }, 0);
+    };
+    window.onload = function() {
+        setTimeout(function() {
+            window.scrollTo(0, 0);
+        }, 0);
+    };
+
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        // Calculate scroll percentage
+        const scrollPosition = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.body.clientHeight;
+        const scrolled = (scrollPosition / (documentHeight - windowHeight)) * 100;
+
+        // Fade out the header gradually
+        header.style.opacity = 1 - (scrollPosition / 70);
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInOptions = {
+            threshold: 0.5,
+            rootMargin: "0px 0px -100px 0px"
+        };
+        
+        const fadeInObserver = new IntersectionObserver(function(entries, fadeInObserver) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('appear');
+                    fadeInObserver.unobserve(entry.target);
+                }
+            });
+        }, fadeInOptions);
+        
+        fadeElements.forEach(element => {
+            fadeInObserver.observe(element);
+        });
+    });
+</script>
+
+</body>
+</html>

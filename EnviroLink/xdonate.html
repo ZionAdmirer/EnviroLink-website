@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate to Support Our Cause</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+            color: #333;
+            background-image: url('duck-5360663_1920.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; 
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Styles */
+        header {
+            /* background-color: #333; */
+            color: #fff;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffcc00;
+            text-decoration: none;
+            margin-left: 545px;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            text-align: right;
+            margin-right: 20px;
+        }
+
+        .nav-links li {
+            display: inline-block;
+            margin-left: 15px;
+        }
+
+        .nav-links li:first-child {
+            margin-left: 0;
+        }
+
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 10px 15px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links li a.active,
+        .nav-links li a:hover {
+            background-color: #ffcc00;
+            color: #333;
+            border-radius: 5px;
+        }
+
+        /* Donate Section */
+        .donate-section {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            margin-bottom: 40px;
+            position: relative;
+            color: #333;
+        }
+
+        .donate-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .donate-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .donate-form input[type="text"],
+        .donate-form input[type="email"],
+        .donate-form select,
+        .donate-form textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .donate-form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .donate-form .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #ffcc00;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .donate-form .btn:hover {
+            background-color: #ffa500;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 4px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            margin-bottom: -440px;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #ffcc00;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <div class="container">
+        <nav>
+            <a href="#" class="logo">EnviroLink</a>
+            <ul class="nav-links">
+                <!-- <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#explore">Explore Trails</a></li>
+                <li><a href="#eco-tips">Eco Tips</a></li>
+                <li><a href="get-involved.html">Get Involved</a></li>
+                <li><a href="contact.html">Contact Us</a></li> -->
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Donate Section -->
+<section class="donate-section">
+    <div class="container">
+        <h2 class="section-title">Donate to Support Our Cause</h2>
+        
+        <div class="donate-form fade-in">
+            <form id="donateForm">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
+                
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="donationAmount">Donation Amount</label>
+                <input type="text" id="donationAmount" name="donationAmount" required>
+                
+                <label for="message">Message (optional)</label>
+                <textarea id="message" name="message"></textarea>
+                
+                <button type="submit" class="btn">Donate Now</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <div class="container">
+        <p>Follow us on social media:</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>&copy; 2024 EnviroLink. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Optional: JavaScript for fade-in animations -->
+<script>
+    window.onload = function() {
+        setTimeout(function() {
+            window.scrollTo(0, 0);
+        }, 0);
+    };
+    window.onload = function() {
+        setTimeout(function() {
+            window.scrollTo(0, 0);
+        }, 0);
+    };
+
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        // Calculate scroll percentage
+        const scrollPosition = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.body.clientHeight;
+        const scrolled = (scrollPosition / (documentHeight - windowHeight)) * 100;
+
+        // Fade out the header gradually
+        header.style.opacity = 1 - (scrollPosition / 70);
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInOptions = {
+            threshold: 0.5,
+            rootMargin: "0px 0px -100px 0px"
+        };
+        
+        const fadeInObserver = new IntersectionObserver(function(entries, fadeInObserver) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('appear');
+                    fadeInObserver.unobserve(entry.target);
+                }
+            });
+        }, fadeInOptions);
+        
+        fadeElements.forEach(element => {
+            fadeInObserver.observe(element);
+        });
+    });
+
+    // Optional: Submit form handling (JavaScript example)
+    const donateForm = document.getElementById('donateForm');
+    donateForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        // Add your form submission logic here (e.g., send data to server)
+        alert('Thank you for your donation!');
+        donateForm.reset(); // Optional: Reset form after submission
+    });
+</script>
+
+</body>
+</html>
